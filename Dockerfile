@@ -1,4 +1,4 @@
-FROM centos:centos7
+FROM centos:latest
 
 RUN yum install epel-release -y
 RUN yum install openssh-server supervisor -y
