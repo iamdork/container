@@ -8,6 +8,7 @@ ADD dork.pub /root/.ssh/authorized_keys
 ADD generate_hostkey.sh /opt/generate_hostkey.sh
 RUN chmod +x /opt/generate_hostkey.sh
 ADD sshd.ini /etc/supervisord.d/sshd.ini
+RUN echo "UseDNS no" >> /etc/ssh/sshd_config
 
 EXPOSE 80
 
